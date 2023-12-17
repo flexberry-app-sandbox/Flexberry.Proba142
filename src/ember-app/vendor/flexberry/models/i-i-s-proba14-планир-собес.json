@@ -1,0 +1,298 @@
+﻿{
+  "name": "IISProba14ПланирСобес",
+  "modelName": "i-i-s-proba14-планир-собес",
+  "className": "ПланирСобес",
+  "nameSpace": "IIS.Proba14",
+  "parentModelName": null,
+  "parentClassName": null,
+  "attrs": [
+    {
+      "name": "датаПланСобес",
+      "type": "date",
+      "flexberryType": "DateTime",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    },
+    {
+      "name": "иметьПриСебе",
+      "type": "string",
+      "flexberryType": "string",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    }
+  ],
+  "belongsTo": [
+    {
+      "polymorphic": false,
+      "presence": true,
+      "name": "организация",
+      "relatedTo": "i-i-s-proba14-организация",
+      "inverse": null
+    },
+    {
+      "polymorphic": false,
+      "presence": true,
+      "name": "регистАнкеты",
+      "relatedTo": "i-i-s-proba14-регист-анкеты",
+      "inverse": null
+    }
+  ],
+  "hasMany": [],
+  "projections": [
+    {
+      "name": "ПланирСобесE",
+      "modelName": "i-i-s-proba14-планир-собес",
+      "attrs": [
+        {
+          "name": "датаПланСобес",
+          "caption": "Дата планирования собеседования",
+          "hidden": false,
+          "index": 0
+        },
+        {
+          "name": "иметьПриСебе",
+          "caption": "Иметь при себе",
+          "hidden": false,
+          "index": 6
+        }
+      ],
+      "belongsTo": [
+        {
+          "lookupValue": "ФИОКандидата",
+          "lookupValueField": "фИОКандидата",
+          "relationName": "РегистАнкеты",
+          "belongsTo": [
+            {
+              "lookupValue": null,
+              "lookupValueField": null,
+              "relationName": "РегистАнкеты.ВакантДолжн",
+              "belongsTo": [],
+              "hidden": false,
+              "attrs": [
+                {
+                  "name": "должности",
+                  "caption": "Вакантная должность",
+                  "hidden": false,
+                  "index": 3
+                }
+              ],
+              "index": -1,
+              "type": null,
+              "caption": "",
+              "name": "вакантДолжн",
+              "relatedTo": "i-i-s-proba14-вакант-должн",
+              "inverse": null
+            },
+            {
+              "lookupValue": null,
+              "lookupValueField": null,
+              "relationName": "РегистАнкеты.Организация",
+              "belongsTo": [],
+              "hidden": false,
+              "attrs": [
+                {
+                  "name": "адрес",
+                  "caption": "Адрес организации",
+                  "hidden": false,
+                  "index": 9
+                },
+                {
+                  "name": "телОрганиз",
+                  "caption": "Телефон организации",
+                  "hidden": false,
+                  "index": 10
+                }
+              ],
+              "index": -1,
+              "type": null,
+              "caption": "",
+              "name": "организация",
+              "relatedTo": "i-i-s-proba14-организация",
+              "inverse": null
+            }
+          ],
+          "hidden": false,
+          "attrs": [
+            {
+              "name": "фИОКандидата",
+              "caption": "ФИО кандидата",
+              "hidden": true,
+              "index": 2
+            },
+            {
+              "name": "номерТелефона",
+              "caption": "Номер телефона",
+              "hidden": false,
+              "index": 4
+            },
+            {
+              "name": "элПочта",
+              "caption": "Электронная почта",
+              "hidden": false,
+              "index": 5
+            }
+          ],
+          "index": 1,
+          "type": "standard",
+          "caption": "ФИО кандидата",
+          "name": "регистАнкеты",
+          "relatedTo": "i-i-s-proba14-регист-анкеты",
+          "inverse": null
+        },
+        {
+          "lookupValue": "Наименование",
+          "lookupValueField": "наименование",
+          "relationName": "Организация",
+          "belongsTo": [],
+          "hidden": false,
+          "attrs": [
+            {
+              "name": "наименование",
+              "caption": "Наименование организации",
+              "hidden": true,
+              "index": 8
+            }
+          ],
+          "index": 7,
+          "type": "standard",
+          "caption": "Наименование организации",
+          "name": "организация",
+          "relatedTo": "i-i-s-proba14-организация",
+          "inverse": null
+        }
+      ],
+      "hasMany": []
+    },
+    {
+      "name": "ПланирСобесL",
+      "modelName": "i-i-s-proba14-планир-собес",
+      "attrs": [
+        {
+          "name": "датаПланСобес",
+          "caption": "Дата планирования собеседования",
+          "hidden": false,
+          "index": 0
+        },
+        {
+          "name": "иметьПриСебе",
+          "caption": "Иметь при себе",
+          "hidden": false,
+          "index": 5
+        }
+      ],
+      "belongsTo": [
+        {
+          "lookupValue": null,
+          "lookupValueField": null,
+          "relationName": "РегистАнкеты",
+          "belongsTo": [
+            {
+              "lookupValue": null,
+              "lookupValueField": null,
+              "relationName": "РегистАнкеты.ВакантДолжн",
+              "belongsTo": [],
+              "hidden": false,
+              "attrs": [
+                {
+                  "name": "должности",
+                  "caption": "Вакантная должность",
+                  "hidden": false,
+                  "index": 2
+                }
+              ],
+              "index": -1,
+              "type": null,
+              "caption": "",
+              "name": "вакантДолжн",
+              "relatedTo": "i-i-s-proba14-вакант-должн",
+              "inverse": null
+            },
+            {
+              "lookupValue": null,
+              "lookupValueField": null,
+              "relationName": "РегистАнкеты.Организация",
+              "belongsTo": [],
+              "hidden": false,
+              "attrs": [
+                {
+                  "name": "адрес",
+                  "caption": "Адрес организации",
+                  "hidden": false,
+                  "index": 7
+                },
+                {
+                  "name": "телОрганиз",
+                  "caption": "Телефон организации",
+                  "hidden": false,
+                  "index": 8
+                }
+              ],
+              "index": -1,
+              "type": null,
+              "caption": "",
+              "name": "организация",
+              "relatedTo": "i-i-s-proba14-организация",
+              "inverse": null
+            }
+          ],
+          "hidden": false,
+          "attrs": [
+            {
+              "name": "фИОКандидата",
+              "caption": "ФИО кандидата",
+              "hidden": false,
+              "index": 1
+            },
+            {
+              "name": "номерТелефона",
+              "caption": "Номер телефона",
+              "hidden": false,
+              "index": 3
+            },
+            {
+              "name": "элПочта",
+              "caption": "Электронная почта ",
+              "hidden": false,
+              "index": 4
+            }
+          ],
+          "index": -1,
+          "type": "default",
+          "caption": "ФИО кандидата",
+          "name": "регистАнкеты",
+          "relatedTo": "i-i-s-proba14-регист-анкеты",
+          "inverse": null
+        },
+        {
+          "lookupValue": null,
+          "lookupValueField": null,
+          "relationName": "Организация",
+          "belongsTo": [],
+          "hidden": false,
+          "attrs": [
+            {
+              "name": "наименование",
+              "caption": "Наименование организации",
+              "hidden": false,
+              "index": 6
+            }
+          ],
+          "index": -1,
+          "type": "default",
+          "caption": "Наименование организации",
+          "name": "организация",
+          "relatedTo": "i-i-s-proba14-организация",
+          "inverse": null
+        }
+      ],
+      "hasMany": []
+    }
+  ],
+  "stored": true,
+  "offline": true,
+  "external": false
+}

@@ -1,0 +1,15 @@
+﻿{
+  "newForm": "i-i-s-proba14-рег-результ-e",
+  "editForm": "i-i-s-proba14-рег-результ-e",
+  "external": false,
+  "caption": "Регистрация результатов собеседования",
+  "name": "IISProba14РегРезультL",
+  "className": "РегРезультL",
+  "attrs": [],
+  "projections": [
+    {
+      "modelName": "i-i-s-proba14-рег-результ",
+      "modelProjection": "РегРезультL"
+    }
+  ]
+}

@@ -1,0 +1,15 @@
+﻿{
+  "newForm": "i-i-s-proba14-планир-собес-e",
+  "editForm": "i-i-s-proba14-планир-собес-e",
+  "external": false,
+  "caption": "Планирование собеседования",
+  "name": "IISProba14ПланирСобесL",
+  "className": "ПланирСобесL",
+  "attrs": [],
+  "projections": [
+    {
+      "modelName": "i-i-s-proba14-планир-собес",
+      "modelProjection": "ПланирСобесL"
+    }
+  ]
+}

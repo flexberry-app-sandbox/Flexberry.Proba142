@@ -1,0 +1,75 @@
+﻿{
+  "name": "IISProba14ВакантДолжн",
+  "modelName": "i-i-s-proba14-вакант-должн",
+  "className": "ВакантДолжн",
+  "nameSpace": "IIS.Proba14",
+  "parentModelName": null,
+  "parentClassName": null,
+  "attrs": [
+    {
+      "name": "iDДолжности",
+      "type": "number",
+      "flexberryType": "int",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    },
+    {
+      "name": "должности",
+      "type": "string",
+      "flexberryType": "string",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    }
+  ],
+  "belongsTo": [],
+  "hasMany": [],
+  "projections": [
+    {
+      "name": "ВакантДолжнE",
+      "modelName": "i-i-s-proba14-вакант-должн",
+      "attrs": [
+        {
+          "name": "должности",
+          "caption": "Должности",
+          "hidden": false,
+          "index": 0
+        },
+        {
+          "name": "iDДолжности",
+          "caption": "ID должности",
+          "hidden": false,
+          "index": 1
+        }
+      ],
+      "belongsTo": [],
+      "hasMany": []
+    },
+    {
+      "name": "ВакантДолжнL",
+      "modelName": "i-i-s-proba14-вакант-должн",
+      "attrs": [
+        {
+          "name": "должности",
+          "caption": "Вакантная должность",
+          "hidden": false,
+          "index": 0
+        },
+        {
+          "name": "iDДолжности",
+          "caption": "ID должности",
+          "hidden": false,
+          "index": 1
+        }
+      ],
+      "belongsTo": [],
+      "hasMany": []
+    }
+  ],
+  "stored": true,
+  "offline": true,
+  "external": false
+}

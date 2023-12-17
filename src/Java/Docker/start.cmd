@@ -1,0 +1,1 @@
+docker-compose -p proba14-java up -d

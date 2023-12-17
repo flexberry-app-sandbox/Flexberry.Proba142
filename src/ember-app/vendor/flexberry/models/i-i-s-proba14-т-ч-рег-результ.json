@@ -1,0 +1,78 @@
+﻿{
+  "name": "IISProba14ТЧРегРезульт",
+  "modelName": "i-i-s-proba14-т-ч-рег-результ",
+  "className": "ТЧРегРезульт",
+  "nameSpace": "IIS.Proba14",
+  "parentModelName": null,
+  "parentClassName": null,
+  "attrs": [
+    {
+      "name": "итогСобес",
+      "type": "i-i-s-proba14-итог-собес",
+      "flexberryType": "ИтогСобес",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    },
+    {
+      "name": "крКомИлиОбсРеш",
+      "type": "string",
+      "flexberryType": "string",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    },
+    {
+      "name": "оценкаКандид",
+      "type": "number",
+      "flexberryType": "int",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    }
+  ],
+  "belongsTo": [
+    {
+      "polymorphic": false,
+      "presence": true,
+      "name": "регРезульт",
+      "relatedTo": "i-i-s-proba14-рег-результ",
+      "inverse": "тЧРегРезульт"
+    }
+  ],
+  "hasMany": [],
+  "projections": [
+    {
+      "name": "ТЧРегРезультE",
+      "modelName": "i-i-s-proba14-т-ч-рег-результ",
+      "attrs": [
+        {
+          "name": "итогСобес",
+          "caption": "Итог собеседования",
+          "hidden": false,
+          "index": 0
+        },
+        {
+          "name": "оценкаКандид",
+          "caption": "Оценка кандидата",
+          "hidden": false,
+          "index": 1
+        },
+        {
+          "name": "крКомИлиОбсРеш",
+          "caption": "Краткий комментарий или обоснованное решение",
+          "hidden": false,
+          "index": 2
+        }
+      ],
+      "belongsTo": [],
+      "hasMany": []
+    }
+  ],
+  "stored": true,
+  "offline": true,
+  "external": false
+}
